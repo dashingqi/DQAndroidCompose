@@ -1,5 +1,25 @@
 [
   {
+    "name": "Sheepadoodle",
+    "avatar_filename": "sheepadoodle",
+    "introduction": "The Sheepadoodle is a mixed breed dog — a cross between the Old English Sheepdog and Poodle dog breeds. Smart, playful, and loving, these pups inherited some of the best traits from both of their parents.\n\nSheepadoodles go by many names, including Sheep-a-poo, Sheeppoo, Sheepdoodle, and Sheepdogpoo. Despite their status as a designer breed, you may  find these mixed breed dogs in shelters and rescues, so remember to adopt! Don’t shop!"
+  },
+  {
+    "name": "Terripoo",
+    "avatar_filename": "terripoo",
+    "introduction": "The Terripoo is a cross between the Australian Terrier and the miniature Poodle. Intelligent, intuitive, and playful, these small dogs make excellent family pets.\n\nTerripoos are also known as Terri Poos, Terridoodles, and Terrypoos. They are considered “designer dogs,” bred on purpose to emphasize desirable characteristics from each breed. As always, please adopt if you’re looking to add a Terripoo to your life."
+  },
+  {
+    "name": "Valley Bulldog",
+    "avatar_filename": "valley_bulldog",
+    "introduction": "The Valley Bulldog is a mixed breed dog–a cross between the Boxer and English Bulldog breeds. Medium in size, active, and loyal, these pups inherited some of the best qualities from both of their parents\n\nValley Bulldogs also go by the name Bull Boxer. Despite their unfortunate status as a designer breed, you can find these mixed pups in shelters and breed-specific rescues, so remember to adopt! Don’t shop!"
+  },
+  {
+    "name": "Westiepoo",
+    "avatar_filename": "westiepoo",
+    "introduction": "The Westiepoo is a mixed breed dog — a cross between the West Highland White Terrier and Poodle dog breeds. Clever, active, and affectionate, these pups inherited some of the best qualities from both of their parents.\n\nWestiepoos are also sometimes known as Westiedoodles and Wee-Poos. You can find these mixed breed dogs in shelters and breed specific rescues, so remember to always adopt! Don’t shop if you’re looking to add a Westiepoo to your home!"
+  },
+  {
     "name": "Alaskan Klee Kai",
     "avatar_filename": "alaskan_klee_kai",
     "introduction": "Small, smart, and energetic, the Alaskan Klee Kai is a relatively new breed that looks like a smaller version of the Siberian Husky. Even the name “Klee Kai” comes from an Inuit term meaning “small dog.”\n\nWhile Alaskan Klee Kais may resemble larger Husky breeds, they have some key differences, especially when it comes to temperament, that distinguish it from its ancestor working class dogs of the north. This breed is more suited to the life of a companion; although, the Alaskan Klee Kai shares the high energy of the Husky and demands plenty of exercise."
@@ -83,25 +103,5 @@
     "name": "Rat Terrier",
     "avatar_filename": "rat_terrier",
     "introduction": "Members of the Rat Terrier dog breed are adorable, little, digging escape artists who are true terriers: feisty, funny, energetic, lively, vermin-chasing, and incapable of being boring. Stubborn as all get out, they are not big on pleasing people, but the people who love them laugh all the time.\n\nEven though these are purebred dogs, you may find them in the care of shelters or rescue groups. Remember to adopt! Don’t shop if you want to bring a dog home."
-  },
-  {
-    "name": "Sheepadoodle",
-    "avatar_filename": "sheepadoodle",
-    "introduction": "The Sheepadoodle is a mixed breed dog — a cross between the Old English Sheepdog and Poodle dog breeds. Smart, playful, and loving, these pups inherited some of the best traits from both of their parents.\n\nSheepadoodles go by many names, including Sheep-a-poo, Sheeppoo, Sheepdoodle, and Sheepdogpoo. Despite their status as a designer breed, you may  find these mixed breed dogs in shelters and rescues, so remember to adopt! Don’t shop!"
-  },
-  {
-    "name": "Terripoo",
-    "avatar_filename": "terripoo",
-    "introduction": "The Terripoo is a cross between the Australian Terrier and the miniature Poodle. Intelligent, intuitive, and playful, these small dogs make excellent family pets.\n\nTerripoos are also known as Terri Poos, Terridoodles, and Terrypoos. They are considered “designer dogs,” bred on purpose to emphasize desirable characteristics from each breed. As always, please adopt if you’re looking to add a Terripoo to your life."
-  },
-  {
-    "name": "Valley Bulldog",
-    "avatar_filename": "valley_bulldog",
-    "introduction": "The Valley Bulldog is a mixed breed dog–a cross between the Boxer and English Bulldog breeds. Medium in size, active, and loyal, these pups inherited some of the best qualities from both of their parents\n\nValley Bulldogs also go by the name Bull Boxer. Despite their unfortunate status as a designer breed, you can find these mixed pups in shelters and breed-specific rescues, so remember to adopt! Don’t shop!"
-  },
-  {
-    "name": "Westiepoo",
-    "avatar_filename": "westiepoo",
-    "introduction": "The Westiepoo is a mixed breed dog — a cross between the West Highland White Terrier and Poodle dog breeds. Clever, active, and affectionate, these pups inherited some of the best qualities from both of their parents.\n\nWestiepoos are also sometimes known as Westiedoodles and Wee-Poos. You can find these mixed breed dogs in shelters and breed specific rescues, so remember to always adopt! Don’t shop if you’re looking to add a Westiepoo to your home!"
   }
 ]
