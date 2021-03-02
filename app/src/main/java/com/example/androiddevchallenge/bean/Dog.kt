@@ -29,5 +29,6 @@ import kotlinx.android.parcel.Parcelize
 class Dog(
     var name: String,
     @SerializedName("avatar_filename") var avatarFileName: String,
-    var introduction: String
+    var introduction: String,
+    var adopted: Boolean = false
 ) : Parcelable
