@@ -13,12 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.example.androiddevchallenge.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -55,7 +57,13 @@ class MainActivity : AppCompatActivity() {
             MyTheme {
                 Scaffold(
                     topBar = {
-                        TopAppBar(title = { Text("Dog Home") })
+                        TopAppBar(title = {
+                            Text(
+                                text = "Dog Home",
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                        })
                     }
                 ) {
                     var dogData = DogDataUtil.getDogData()
@@ -79,12 +87,19 @@ class MainActivity : AppCompatActivity() {
             modifier = Modifier
                 .fillMaxWidth()
                 .requiredHeight(240.dp)
-                .padding(start = 16.dp, top = 16.dp, end = 16.dp),
+                .padding(start = 16.dp, top = 16.dp, end = 16.dp)
+                .clickable(onClick = {
+                    Intent(this, DogDetailActivity::class.java).apply {
+                        putExtra(CURRENT_DOG, dog)
+                        startActivity(this)
+                    }
+                }),
             elevation = 4.dp,
         ) {
             CardItem(dog)
         }
     }
+
 
     /**
      * pic

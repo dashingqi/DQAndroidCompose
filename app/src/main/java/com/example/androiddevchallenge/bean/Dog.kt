@@ -15,7 +15,9 @@
  */
 package com.example.androiddevchallenge.bean
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 /**
  * @author : zhangqi
@@ -23,8 +25,9 @@ import com.google.gson.annotations.SerializedName
  * desc :
  */
 
+@kotlinx.parcelize.Parcelize
 class Dog(
     var name: String,
     @SerializedName("avatar_filename") var avatarFileName: String,
     var introduction: String
-)
+) : Parcelable
