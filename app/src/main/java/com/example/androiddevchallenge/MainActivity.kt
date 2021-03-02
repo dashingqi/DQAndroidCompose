@@ -19,11 +19,21 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
+import androidx.compose.material.Card
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -38,15 +48,16 @@ import com.example.androiddevchallenge.bean.Dog
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.utils.DogDataUtil
 
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                Scaffold(topBar = {
-                    TopAppBar(title = { Text("Dog Home") })
-                }) {
+                Scaffold(
+                    topBar = {
+                        TopAppBar(title = { Text("Dog Home") })
+                    }
+                ) {
                     var dogData = DogDataUtil.getDogData()
                     dogData?.let { list ->
                         Box(modifier = Modifier.fillMaxSize()) {
@@ -62,7 +73,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     @Composable
     private fun DogItem(position: Int, dog: Dog) {
         Card(
@@ -74,7 +84,6 @@ class MainActivity : AppCompatActivity() {
         ) {
             CardItem(dog)
         }
-
     }
 
     /**
@@ -115,7 +124,6 @@ class MainActivity : AppCompatActivity() {
                     textAlign = TextAlign.Center
                 )
             }
-
         }
     }
 }
