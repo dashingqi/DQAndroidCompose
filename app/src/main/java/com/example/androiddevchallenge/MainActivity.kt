@@ -18,44 +18,104 @@ package com.example.androiddevchallenge
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.app.ProjectApp
+import com.example.androiddevchallenge.bean.Dog
 import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.androiddevchallenge.utils.DogDataUtil
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                MyApp()
+                Scaffold(topBar = {
+                    TopAppBar(title = { Text("Dog Home") })
+                }) {
+                    var dogData = DogDataUtil.getDogData()
+                    dogData?.let { list ->
+                        Box(modifier = Modifier.fillMaxSize()) {
+                            LazyColumn(Modifier.fillMaxSize()) {
+                                itemsIndexed(list) { position, item ->
+                                    DogItem(position, item)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-}
 
-// Start building your app here!
-@Composable
-fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+
+    @Composable
+    private fun DogItem(position: Int, dog: Dog) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .requiredHeight(240.dp)
+                .padding(start = 16.dp, top = 16.dp, end = 16.dp),
+            elevation = 4.dp,
+        ) {
+            CardItem(dog)
+        }
+
     }
-}
 
-@Preview("Light Theme", widthDp = 360, heightDp = 640)
-@Composable
-fun LightPreview() {
-    MyTheme {
-        MyApp()
-    }
-}
+    /**
+     * pic
+     * name
+     */
+    @Composable
+    fun CardItem(dog: Dog) {
+        var imageResource = ProjectApp.mApp.resources.getIdentifier(
+            dog.avatarFileName,
+            "drawable",
+            ProjectApp.mApp.packageName
+        )
+        var dogImg = painterResource(imageResource)
+        Image(
+            painter = dogImg,
+            contentDescription = dog.name,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .requiredHeight(240.dp)
+                .clip(shape = RoundedCornerShape(6.dp))
+        )
 
-@Preview("Dark Theme", widthDp = 360, heightDp = 640)
-@Composable
-fun DarkPreview() {
-    MyTheme(darkTheme = true) {
-        MyApp()
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Bottom
+        ) {
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = Color(0x99000000)
+            ) {
+                Text(
+                    text = dog.name,
+                    fontSize = 18.sp,
+                    color = Color.White,
+                    modifier = Modifier.padding(8.dp).fillMaxWidth(),
+                    textAlign = TextAlign.Center
+                )
+            }
+
+        }
     }
 }
