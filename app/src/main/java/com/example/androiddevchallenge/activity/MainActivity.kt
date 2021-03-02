@@ -57,13 +57,15 @@ class MainActivity : AppCompatActivity() {
             MyTheme {
                 Scaffold(
                     topBar = {
-                        TopAppBar(title = {
-                            Text(
-                                text = "Dog Home",
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                        })
+                        TopAppBar(
+                            title = {
+                                Text(
+                                    text = "Dog Home",
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.fillMaxWidth()
+                                )
+                            }
+                        )
                     }
                 ) {
                     var dogData = DogDataUtil.getDogData()
@@ -88,18 +90,19 @@ class MainActivity : AppCompatActivity() {
                 .fillMaxWidth()
                 .requiredHeight(240.dp)
                 .padding(start = 16.dp, top = 16.dp, end = 16.dp)
-                .clickable(onClick = {
-                    Intent(this, DogDetailActivity::class.java).apply {
-                        putExtra(CURRENT_DOG, dog)
-                        startActivity(this)
+                .clickable(
+                    onClick = {
+                        Intent(this, DogDetailActivity::class.java).apply {
+                            putExtra(CURRENT_DOG, dog)
+                            startActivity(this)
+                        }
                     }
-                }),
+                ),
             elevation = 4.dp,
         ) {
             CardItem(dog)
         }
     }
-
 
     /**
      * pic
