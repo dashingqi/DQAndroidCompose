@@ -1,4 +1,4 @@
-# Puppies Home
+# Dog Home
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
@@ -7,15 +7,9 @@
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
-This is a challenge app for adopting puppies written by Jetpack Compose.
+This is an APP made up of the Jetpack Composer UI component.
 
-The app contains an overview screen that displays a list of puppies, and a detail screen showing each puppy's details.
-
-## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-<!--- What are you especially proud of? -->
-The UI layer is all implemented by Jetpack Compose. This is a simple and clean project for beginners to read and learn.
-Also the project included other Jetpack components, so you can learn how Jetpack Compose can work with them as well.
+The App is divided into a list page and a detail page. The list page shows the dogs, and the detail page shows their information.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
